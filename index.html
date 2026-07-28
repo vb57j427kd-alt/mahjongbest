@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mahjong Best — Premium American Mahjong Sets</title>
-<meta name="description" content="Handcrafted American Mahjong sets with premium tiles, solid wood racks, and complete accessories. Free shipping on orders over $199.">
+<title>Mahjong Best — Premium American Mahjong by Vertex</title>
+<meta name="description" content="Design-driven American Mahjong manufacturer. Premium acrylic tiles, custom OEM/ODM, MOQ 1. Hand-polished, IP-safe patterns. Based in Zaozhuang, shipping worldwide.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -19,21 +19,17 @@
   --gold-dark: #A8883E;
   --gold-glow: rgba(200, 164, 92, 0.15);
   --gold-glow-strong: rgba(200, 164, 92, 0.25);
+  --accent-teal: #4A9E8E;
   --text-primary: #E6EDF3;
   --text-secondary: #8B949E;
   --text-muted: #6E7681;
   --border: #30363D;
   --border-light: #21262D;
-  --accent-red: #C8584C;
-  --accent-green: #4CAF7C;
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
-
 body {
   font-family: var(--font-body);
   background: var(--bg-primary);
@@ -42,13 +38,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── Navigation ── */
+/* Nav */
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   background: rgba(13, 17, 23, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-light);
-  transition: background 0.3s;
 }
 .nav-inner {
   max-width: 1280px; margin: 0 auto; padding: 0 24px;
@@ -58,7 +53,7 @@ body {
   font-family: var(--font-heading);
   font-size: 1.6rem; font-weight: 600;
   color: var(--gold); letter-spacing: 0.5px;
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: center; gap: 10px; text-decoration: none;
 }
 .nav-logo-icon {
   width: 36px; height: 36px; border-radius: 8px;
@@ -81,110 +76,22 @@ body {
   transition: box-shadow 0.2s, transform 0.2s;
 }
 .nav-cta:hover { box-shadow: 0 4px 20px var(--gold-glow); transform: translateY(-1px); }
-.cart-btn {
-  position: relative; background: none; border: none; cursor: pointer;
-  color: var(--text-secondary); font-size: 1.25rem; padding: 4px;
-  transition: color 0.2s;
-}
-.cart-btn:hover { color: var(--gold-light); }
-.cart-count {
-  position: absolute; top: -4px; right: -8px;
-  background: var(--gold); color: var(--bg-primary);
-  font-size: 0.65rem; font-weight: 700;
-  width: 18px; height: 18px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  opacity: 0; transform: scale(0.5); transition: all 0.3s;
-}
-.cart-count.active { opacity: 1; transform: scale(1); }
-
-/* ── Mobile nav toggle ── */
 .menu-toggle {
   display: none; background: none; border: none; cursor: pointer;
   flex-direction: column; gap: 5px; padding: 4px;
 }
-.menu-toggle span {
-  display: block; width: 24px; height: 2px;
-  background: var(--text-primary); border-radius: 1px;
-  transition: transform 0.3s, opacity 0.3s;
-}
+.menu-toggle span { display: block; width: 24px; height: 2px; background: var(--text-primary); border-radius: 1px; }
 
-/* ── Cart Sidebar ── */
-.cart-overlay {
-  position: fixed; inset: 0; z-index: 2000;
-  background: rgba(0,0,0,0.6);
-  opacity: 0; pointer-events: none; transition: opacity 0.3s;
-}
-.cart-overlay.open { opacity: 1; pointer-events: auto; }
-.cart-sidebar {
-  position: fixed; top: 0; right: 0; bottom: 0; width: 400px; max-width: 100%;
-  background: var(--bg-secondary); z-index: 2001;
-  transform: translateX(100%); transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex; flex-direction: column;
-  border-left: 1px solid var(--border);
-}
-.cart-sidebar.open { transform: translateX(0); }
-.cart-header {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 24px; border-bottom: 1px solid var(--border);
-}
-.cart-header h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--gold); }
-.cart-close {
-  background: none; border: none; cursor: pointer;
-  color: var(--text-secondary); font-size: 1.5rem;
-}
-.cart-items { flex: 1; overflow-y: auto; padding: 24px; }
-.cart-item {
-  display: flex; gap: 16px; padding: 16px 0;
-  border-bottom: 1px solid var(--border-light);
-}
-.cart-item-img {
-  width: 72px; height: 72px; border-radius: 8px;
-  background: var(--bg-card); flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 2rem;
-}
-.cart-item-info { flex: 1; }
-.cart-item-name {
-  font-weight: 500; font-size: 0.9rem; margin-bottom: 4px;
-}
-.cart-item-price { color: var(--gold); font-weight: 600; font-size: 0.9rem; }
-.cart-item-qty {
-  display: flex; align-items: center; gap: 10px; margin-top: 8px;
-}
-.cart-item-qty button {
-  background: var(--bg-card); border: 1px solid var(--border); color: var(--text-primary);
-  width: 28px; height: 28px; border-radius: 6px; cursor: pointer;
-  font-size: 1rem; display: flex; align-items: center; justify-content: center;
-}
-.cart-footer {
-  padding: 24px; border-top: 1px solid var(--border);
-}
-.cart-total {
-  display: flex; justify-content: space-between; align-items: center;
-  margin-bottom: 16px; font-size: 1.1rem;
-}
-.cart-total-amount { color: var(--gold); font-weight: 700; font-size: 1.4rem; }
-.cart-checkout {
-  width: 100%; padding: 14px; border: none; border-radius: 10px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-  color: var(--bg-primary); font-weight: 600; font-size: 1rem;
-  cursor: pointer; transition: box-shadow 0.2s;
-}
-.cart-checkout:hover { box-shadow: 0 4px 24px var(--gold-glow); }
-.cart-empty {
-  text-align: center; color: var(--text-muted); padding: 48px 24px;
-}
-
-/* ── Hero ── */
+/* Hero */
 .hero {
   min-height: 100vh; display: flex; align-items: center;
   position: relative; overflow: hidden;
   background: radial-gradient(ellipse at 30% 50%, rgba(200,164,92,0.08) 0%, transparent 60%),
-              radial-gradient(ellipse at 70% 30%, rgba(200,164,92,0.04) 0%, transparent 50%),
+              radial-gradient(ellipse at 70% 30%, rgba(74,158,142,0.06) 0%, transparent 50%),
               var(--bg-primary);
 }
 .hero-pattern {
-  position: absolute; inset: 0; opacity: 0.04;
+  position: absolute; inset: 0; opacity: 0.03;
   background-image: repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 2px, transparent 2px, transparent 12px);
 }
 .hero-grid {
@@ -201,15 +108,22 @@ body {
 }
 .hero-badge-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
 .hero h1 {
-  font-family: var(--font-heading); font-size: 3.8rem; font-weight: 600;
+  font-family: var(--font-heading); font-size: 3.6rem; font-weight: 600;
   line-height: 1.15; color: var(--text-primary); margin-bottom: 24px;
-  letter-spacing: -0.5px;
 }
 .hero h1 span { color: var(--gold); font-style: italic; }
 .hero p {
   font-size: 1.15rem; color: var(--text-secondary);
-  line-height: 1.7; margin-bottom: 36px; max-width: 500px;
+  line-height: 1.7; margin-bottom: 12px; max-width: 520px;
 }
+.hero-trust {
+  display: flex; gap: 24px; margin-bottom: 36px; flex-wrap: wrap;
+}
+.hero-trust-item {
+  display: flex; align-items: center; gap: 8px;
+  color: var(--text-muted); font-size: 0.85rem;
+}
+.hero-trust-item span { color: var(--gold); font-weight: 600; }
 .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
 .btn-primary {
   padding: 16px 36px; border-radius: 10px; border: none; cursor: pointer;
@@ -217,7 +131,6 @@ body {
   color: var(--bg-primary); font-weight: 600; font-size: 0.95rem;
   transition: box-shadow 0.25s, transform 0.2s;
   text-decoration: none; display: inline-block;
-  letter-spacing: 0.3px;
 }
 .btn-primary:hover { box-shadow: 0 6px 28px var(--gold-glow-strong); transform: translateY(-2px); }
 .btn-outline {
@@ -229,31 +142,15 @@ body {
 }
 .btn-outline:hover { border-color: var(--gold); color: var(--gold-light); }
 .hero-visual {
-  position: relative; display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: center; justify-content: center; position: relative;
 }
-.hero-tile-container {
-  width: 380px; height: 480px; position: relative;
-}
-.hero-tile {
-  position: absolute; width: 180px; height: 130px;
-  border-radius: 12px; border: 1px solid var(--border);
-  background: var(--bg-card);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
+.hero-visual img {
+  width: 100%; max-width: 440px; border-radius: 20px;
+  border: 1px solid var(--border);
   box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
-.hero-tile:nth-child(1) { top: 30px; left: 20px; transform: rotate(-6deg); }
-.hero-tile:nth-child(2) { top: 100px; left: 100px; transform: rotate(3deg); z-index: 2; }
-.hero-tile:nth-child(3) { top: 200px; left: 160px; transform: rotate(-2deg); }
-.hero-tile:nth-child(4) { top: 280px; left: 60px; transform: rotate(5deg); }
-.hero-tile-icon { font-size: 2.4rem; margin-bottom: 4px; }
-.hero-tile-label { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
-.hero-glow {
-  position: absolute; width: 300px; height: 300px;
-  background: radial-gradient(circle, var(--gold-glow) 0%, transparent 70%);
-  top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%;
-}
 
-/* ── Section shared ── */
+/* Section shared */
 .section { padding: 100px 24px; }
 .section-inner { max-width: 1280px; margin: 0 auto; }
 .section-label {
@@ -265,115 +162,109 @@ body {
   color: var(--text-primary); margin-bottom: 16px; line-height: 1.25;
 }
 .section-subtitle {
-  color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 56px; max-width: 560px;
+  color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 56px; max-width: 600px;
 }
 
-/* ── Products Grid ── */
+/* Products */
 .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 .product-card {
   background: var(--bg-card); border: 1px solid var(--border-light);
   border-radius: 16px; overflow: hidden;
   transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
 }
 .product-card:hover {
   border-color: var(--gold-dark); transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0,0,0,0.3);
 }
-.product-image {
-  height: 280px; background: linear-gradient(135deg, var(--bg-elevated), var(--bg-card));
-  display: flex; align-items: center; justify-content: center;
-  position: relative; overflow: hidden;
+.product-img-wrap {
+  height: 280px; overflow: hidden; position: relative;
+  background: var(--bg-elevated);
 }
-.product-image-emoji { font-size: 5rem; transition: transform 0.4s; }
-.product-card:hover .product-image-emoji { transform: scale(1.08); }
+.product-img-wrap img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.5s;
+}
+.product-card:hover .product-img-wrap img { transform: scale(1.05); }
 .product-badge {
   position: absolute; top: 16px; left: 16px;
-  background: var(--accent-green); color: #fff;
+  background: var(--accent-teal); color: #fff;
   font-size: 0.7rem; font-weight: 600; padding: 5px 12px;
-  border-radius: 6px; letter-spacing: 0.3px;
+  border-radius: 6px; letter-spacing: 0.3px; z-index: 2;
 }
 .product-body { padding: 24px; }
-.product-body h3 { font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 6px; color: var(--text-primary); }
-.product-desc { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px; line-height: 1.5; }
-.product-features { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
-.product-features span {
-  font-size: 0.75rem; color: var(--text-muted);
-  background: var(--bg-elevated); padding: 4px 10px;
-  border-radius: 6px; border: 1px solid var(--border-light);
-}
-.product-bottom { display: flex; justify-content: space-between; align-items: center; }
-.product-price { font-size: 1.4rem; font-weight: 700; color: var(--gold); }
-.product-price small { font-size: 0.8rem; font-weight: 400; color: var(--text-muted); }
-.btn-add {
-  padding: 10px 22px; border-radius: 8px; border: 1px solid var(--gold-dark);
-  background: transparent; color: var(--gold-light); cursor: pointer;
-  font-weight: 500; font-size: 0.85rem;
-  transition: all 0.2s;
-}
-.btn-add:hover {
-  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-  color: var(--bg-primary); border-color: transparent;
-}
+.product-body h3 { font-size: 1.05rem; margin-bottom: 6px; color: var(--text-primary); font-weight: 600; line-height: 1.3; }
+.product-desc { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 14px; line-height: 1.5; }
+.product-price-row { display: flex; align-items: baseline; gap: 8px; }
+.product-price { font-size: 1.3rem; font-weight: 700; color: var(--gold); }
+.product-moq { color: var(--text-muted); font-size: 0.8rem; }
 
-/* ── Features ── */
+/* Categories */
+.categories-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.category-card {
+  background: var(--bg-card); border: 1px solid var(--border-light);
+  border-radius: 14px; padding: 32px 24px; text-align: center;
+  transition: border-color 0.3s, transform 0.3s;
+  text-decoration: none; display: block;
+}
+.category-card:hover {
+  border-color: var(--gold-dark); transform: translateY(-3px);
+}
+.category-icon { font-size: 2.4rem; margin-bottom: 14px; display: block; }
+.category-card h4 { font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary); }
+.category-card p { color: var(--text-muted); font-size: 0.85rem; margin-top: 6px; }
+
+/* Features */
 #features { background: var(--bg-secondary); }
-.features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 .feature-card {
-  text-align: center; padding: 36px 24px;
+  text-align: center; padding: 40px 28px;
   background: var(--bg-card); border: 1px solid var(--border-light);
   border-radius: 14px; transition: border-color 0.3s;
 }
 .feature-card:hover { border-color: var(--gold-dark); }
-.feature-icon {
-  font-size: 2.2rem; margin-bottom: 16px; display: block;
-}
+.feature-icon { font-size: 2.2rem; margin-bottom: 16px; display: block; }
 .feature-card h4 { font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary); }
 .feature-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; }
 
-/* ── About ── */
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-.about-image {
-  height: 440px; background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated));
-  border-radius: 20px; border: 1px solid var(--border-light);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 8rem;
+/* OEM Section */
+.oem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.oem-visual img {
+  width: 100%; border-radius: 20px; border: 1px solid var(--border);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
-.about-text h3 { font-family: var(--font-heading); font-size: 2rem; margin-bottom: 20px; color: var(--text-primary); }
-.about-text p { color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px; }
-.about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
-.about-stat { text-align: center; }
-.about-stat-number { font-family: var(--font-heading); font-size: 2rem; color: var(--gold); font-weight: 600; }
-.about-stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; }
+.oem-steps { margin-top: 28px; display: flex; flex-direction: column; gap: 16px; }
+.oem-step {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 16px; background: var(--bg-card); border-radius: 10px;
+  border: 1px solid var(--border-light);
+}
+.oem-step-num {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: var(--bg-primary); font-weight: 700; font-size: 0.9rem;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.oem-step-text h5 { font-size: 0.95rem; color: var(--text-primary); margin-bottom: 4px; }
+.oem-step-text p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
 
-/* ── Testimonials ── */
-#testimonials { background: var(--bg-secondary); }
-.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.testimonial-card {
+/* Stats */
+#stats { background: var(--bg-secondary); }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.stat-card {
+  text-align: center; padding: 36px 24px;
   background: var(--bg-card); border: 1px solid var(--border-light);
-  border-radius: 14px; padding: 32px;
+  border-radius: 14px;
 }
-.testimonial-stars { color: var(--gold); font-size: 1rem; margin-bottom: 16px; letter-spacing: 2px; }
-.testimonial-text { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; font-style: italic; }
-.testimonial-author { display: flex; align-items: center; gap: 12px; }
-.testimonial-avatar {
-  width: 44px; height: 44px; border-radius: 50%;
-  background: var(--bg-elevated); display: flex; align-items: center;
-  justify-content: center; font-weight: 600; font-size: 1.1rem;
-  color: var(--gold-light);
-}
-.testimonial-name { font-weight: 600; font-size: 0.9rem; }
-.testimonial-role { color: var(--text-muted); font-size: 0.8rem; }
+.stat-number { font-family: var(--font-heading); font-size: 2.4rem; color: var(--gold); font-weight: 600; }
+.stat-label { font-size: 0.85rem; color: var(--text-muted); margin-top: 6px; }
 
-/* ── CTA Banner ── */
+/* CTA */
 .cta-banner {
   background: linear-gradient(135deg, rgba(200,164,92,0.08), rgba(200,164,92,0.02));
   border: 1px solid rgba(200,164,92,0.15); border-radius: 20px;
-  padding: 64px; text-align: center; position: relative; overflow: hidden;
+  padding: 64px; text-align: center;
 }
-.cta-banner h2 {
-  font-family: var(--font-heading); font-size: 2.4rem; color: var(--text-primary); margin-bottom: 16px;
-}
+.cta-banner h2 { font-family: var(--font-heading); font-size: 2.4rem; color: var(--text-primary); margin-bottom: 16px; }
 .cta-banner p { color: var(--text-secondary); margin-bottom: 32px; font-size: 1.1rem; max-width: 500px; margin-left: auto; margin-right: auto; }
 .newsletter-form { display: flex; gap: 12px; justify-content: center; max-width: 460px; margin: 0 auto; }
 .newsletter-form input {
@@ -390,13 +281,13 @@ body {
 }
 .newsletter-form button:hover { box-shadow: 0 4px 20px var(--gold-glow); }
 
-/* ── Footer ── */
+/* Footer */
 .footer { background: var(--bg-secondary); border-top: 1px solid var(--border-light); padding: 64px 24px 32px; }
 .footer-inner { max-width: 1280px; margin: 0 auto; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
 .footer-brand { font-family: var(--font-heading); font-size: 1.4rem; color: var(--gold); margin-bottom: 12px; }
 .footer-desc { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; max-width: 300px; }
-.footer-col h4 { font-weight: 600; font-size: 0.85rem; color: var(--text-primary); margin-bottom: 20px; letter-spacing: 0.5px; text-transform: uppercase; }
+.footer-col h4 { font-weight: 600; font-size: 0.85rem; color: var(--text-primary); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
 .footer-col ul { list-style: none; }
 .footer-col li { margin-bottom: 10px; }
 .footer-col a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
@@ -409,36 +300,33 @@ body {
 .footer-bottom-text { color: var(--text-muted); font-size: 0.85rem; }
 .footer-payment { display: flex; gap: 12px; font-size: 1.6rem; color: var(--text-muted); }
 
-/* ── Toast notification ── */
-.toast {
-  position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(120px);
-  background: var(--bg-elevated); border: 1px solid var(--gold-dark);
-  color: var(--gold-light); padding: 14px 28px; border-radius: 10px;
-  font-weight: 500; font-size: 0.9rem;
-  z-index: 3000; transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+/* WhatsApp Float */
+.whatsapp-float {
+  position: fixed; bottom: 32px; right: 32px; z-index: 1500;
+  width: 60px; height: 60px; border-radius: 50%;
+  background: #25D366;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+  transition: transform 0.25s, box-shadow 0.25s;
+  text-decoration: none;
 }
-.toast.show { transform: translateX(-50%) translateY(0); }
+.whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5); }
 
-/* ── Responsive ── */
+/* Responsive */
 @media (max-width: 1024px) {
   .hero-grid { grid-template-columns: 1fr; gap: 48px; text-align: center; }
-  .hero h1 { font-size: 2.8rem; }
-  .hero p { max-width: 100%; }
+  .hero h1 { font-size: 2.6rem; }
+  .hero p { max-width: 100%; margin-left: auto; margin-right: auto; }
+  .hero-trust { justify-content: center; }
   .hero-buttons { justify-content: center; }
-  .hero-tile-container { width: 300px; height: 380px; }
-  .hero-tile { width: 140px; height: 100px; }
-  .hero-tile:nth-child(1) { top: 20px; left: 10px; }
-  .hero-tile:nth-child(2) { top: 70px; left: 70px; }
-  .hero-tile:nth-child(3) { top: 150px; left: 120px; }
-  .hero-tile:nth-child(4) { top: 210px; left: 40px; }
+  .hero-visual img { max-width: 320px; }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .categories-grid { grid-template-columns: repeat(2, 1fr); }
   .features-grid { grid-template-columns: repeat(2, 1fr); }
-  .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  .oem-grid { grid-template-columns: 1fr; gap: 40px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width: 640px) {
   .nav-links { display: none; }
   .menu-toggle { display: flex; }
@@ -450,207 +338,254 @@ body {
   .hero h1 { font-size: 2.2rem; }
   .section-title { font-size: 2rem; }
   .products-grid { grid-template-columns: 1fr; }
+  .categories-grid { grid-template-columns: 1fr 1fr; }
   .features-grid { grid-template-columns: 1fr; }
-  .testimonials-grid { grid-template-columns: 1fr; }
-  .hero-tile-container { display: none; }
   .hero { min-height: auto; }
   .cta-banner { padding: 40px 24px; }
   .newsletter-form { flex-direction: column; }
   .footer-grid { grid-template-columns: 1fr; }
-  .about-stats { grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .section { padding: 64px 24px; }
+  .whatsapp-float { bottom: 20px; right: 20px; width: 52px; height: 52px; }
 }
 </style>
 </head>
 <body>
 
 <!-- Navigation -->
-<nav class="nav" id="nav">
+<nav class="nav">
   <div class="nav-inner">
     <a href="#" class="nav-logo">
       <span class="nav-logo-icon">🀄</span>
       Mahjong Best
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#products">Shop</a></li>
+      <li><a href="#products">Collection</a></li>
+      <li><a href="#categories">All Products</a></li>
+      <li><a href="#oem">OEM/ODM</a></li>
       <li><a href="#features">Why Us</a></li>
-      <li><a href="#about">Our Story</a></li>
-      <li><a href="#testimonials">Reviews</a></li>
-      <li><a href="#shop" class="nav-cta">Shop Now</a></li>
+      <li><a href="#shop" class="nav-cta">Get a Quote</a></li>
     </ul>
-    <div style="display:flex;align-items:center;gap:16px;">
-      <button class="cart-btn" onclick="toggleCart()" aria-label="View cart">
-        🛒
-        <span class="cart-count" id="cartCount">0</span>
-      </button>
-      <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
-<!-- Cart Sidebar -->
-<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
-<div class="cart-sidebar" id="cartSidebar">
-  <div class="cart-header">
-    <h3>Your Cart</h3>
-    <button class="cart-close" onclick="toggleCart()">✕</button>
-  </div>
-  <div class="cart-items" id="cartItems">
-    <div class="cart-empty">Your cart is empty</div>
-  </div>
-  <div class="cart-footer">
-    <div class="cart-total">
-      <span>Subtotal</span>
-      <span class="cart-total-amount" id="cartTotal">$0</span>
-    </div>
-    <button class="cart-checkout" onclick="alert('Checkout functionality coming soon. Contact us at yale@mahjongbest.com to place your order.')">Proceed to Checkout</button>
-  </div>
-</div>
-
-<!-- Toast -->
-<div class="toast" id="toast"></div>
-
 <!-- Hero -->
-<section class="hero" id="home">
+<section class="hero">
   <div class="hero-pattern"></div>
   <div class="hero-grid">
     <div>
-      <div class="hero-badge"><span class="hero-badge-dot"></span> Premium American Mahjong Since 2018</div>
-      <h1>Play Your <span>Best</span> Game</h1>
-      <p>Handcrafted American Mahjong sets designed for serious players. Premium tiles, solid wood racks, and everything you need to elevate your game night.</p>
+      <div class="hero-badge"><span class="hero-badge-dot"></span> Zaozhuang Vertex International Trade</div>
+      <h1>Where <span>Artistry</span> Meets the Table</h1>
+      <p>Design-driven American Mahjong manufacturer. Premium acrylic tiles with custom engraving, hand-polished finishes, and IP-safe patterns — crafted for boutique owners and discerning players.</p>
+      <div class="hero-trust">
+        <div class="hero-trust-item"><span>MOQ 1</span> Set</div>
+        <div class="hero-trust-item"><span>90%</span> NA Market</div>
+        <div class="hero-trust-item"><span>7-Day</span> Sampling</div>
+        <div class="hero-trust-item"><span>100%</span> IP Safe</div>
+      </div>
       <div class="hero-buttons">
         <a href="#products" class="btn-primary">Explore Collection</a>
-        <a href="#features" class="btn-outline">Why Mahjong Best</a>
+        <a href="#oem" class="btn-outline">Custom OEM/ODM</a>
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-tile-container">
-        <div class="hero-tile"><span class="hero-tile-icon">🀇</span><span class="hero-tile-label">Bamboo</span></div>
-        <div class="hero-tile"><span class="hero-tile-icon">🀙</span><span class="hero-tile-label">Characters</span></div>
-        <div class="hero-tile"><span class="hero-tile-icon">🀐</span><span class="hero-tile-label">Dots</span></div>
-        <div class="hero-tile"><span class="hero-tile-icon">🀀</span><span class="hero-tile-label">Dragons</span></div>
-        <div class="hero-glow"></div>
-      </div>
+      <img src="https://sc04.alicdn.com/kf/Hbe53ce63740b4982aa07be57061604f6n.jpg" alt="Premium American Mahjong Set" loading="eager">
     </div>
   </div>
 </section>
 
-<!-- Products -->
+<!-- Featured Collection -->
 <section class="section" id="products">
   <div class="section-inner">
-    <div class="section-label">Collection</div>
-    <h2 class="section-title">Our Mahjong Sets</h2>
-    <p class="section-subtitle">From tournament-grade to heirloom quality — every set includes a full 166-tile American Mahjong set with all accessories.</p>
+    <div class="section-label">Featured Collection</div>
+    <h2 class="section-title">Trending Now</h2>
+    <p class="section-subtitle">Each set includes 160+ acrylic tiles with custom-engraved jokers, matching pushers, wind indicator, dice, and luxury case. All patterns are original and IP-safe.</p>
     <div class="products-grid">
-      <!-- Product 1 -->
+
       <div class="product-card">
-        <div class="product-image" style="background:linear-gradient(135deg, #1a1f2e, #1e2a3a);">
-          <span class="product-image-emoji">🏆</span>
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/H2d9c4eb0e7cd4b6ab48a12ba52439ec99/Terracotta-Orange-Mahjong-Set-Boho-Style-Acrylic.jpg?hasNWGrade=1" alt="Terracotta Orange Boho Mahjong Set" loading="lazy">
+          <span class="product-badge">Hot</span>
+        </div>
+        <div class="product-body">
+          <h3>Terracotta Orange Boho Set</h3>
+          <p class="product-desc">Warm earthy tones with bohemian-inspired joker art. 160 tiles with acrylic pushers — a standout for modern home decor retailers.</p>
+          <div class="product-price-row">
+            <span class="product-price">$43 – $65</span>
+            <span class="product-moq">/ set · MOQ 1</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/H9a520a8a00b54f0581a02d07149b8de4b/Bespoke-Deep-Teal-American-Mahjong-Set-Engraved.png?hasNWGrade=1" alt="Deep Teal Peacock Mahjong Set" loading="lazy">
+        </div>
+        <div class="product-body">
+          <h3>Deep Teal Peacock Set</h3>
+          <p class="product-desc">Striking teal acrylic with dragonfly motifs and peacock-blue engravings. Botanical theme — a bestseller for luxury game boutiques.</p>
+          <div class="product-price-row">
+            <span class="product-price">$43 – $65</span>
+            <span class="product-moq">/ set · MOQ 1</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/H9c103aeb2f1347e3a3e0b591195f73119/Aesthetic-White-Acrylic-American-Mahjong-Set-Custom.jpg?hasNWGrade=1" alt="White Acrylic Lucky Tiger Set" loading="lazy">
           <span class="product-badge">Bestseller</span>
         </div>
         <div class="product-body">
-          <h3>The Imperial</h3>
-          <p class="product-desc">Our flagship set — hand-engraved tiles on solid melamine with 24K gold inlay numerals. The ultimate statement for serious players.</p>
-          <div class="product-features">
-            <span>166 Tiles</span><span>Gold Inlay</span><span>Solid Wood Rack</span><span>Leather Case</span>
-          </div>
-          <div class="product-bottom">
-            <div class="product-price">$349 <small>USD</small></div>
-            <button class="btn-add" onclick="addToCart('The Imperial', 349)">Add to Cart</button>
+          <h3>White Acrylic Lucky Tiger Set</h3>
+          <p class="product-desc">Crisp white acrylic with hand-painted gold joker art — Lucky Tiger, Crown, and Dragon motifs. Our top-selling design for boutique brands.</p>
+          <div class="product-price-row">
+            <span class="product-price">$43 – $65</span>
+            <span class="product-moq">/ set · MOQ 1</span>
           </div>
         </div>
       </div>
 
-      <!-- Product 2 -->
       <div class="product-card">
-        <div class="product-image" style="background:linear-gradient(135deg, #1e281e, #243024);">
-          <span class="product-image-emoji">💎</span>
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/He4c0c6d8523e43a6a7b6d218ff4a04a4N/In-Stock-Luxury-Mother-of-Pearl-American.jpg?hasNWGrade=1" alt="Mother of Pearl Mahjong Set" loading="lazy">
+          <span class="product-badge">Luxury</span>
         </div>
         <div class="product-body">
-          <h3>The Classic</h3>
-          <p class="product-desc">Double-engraved ivory-look tiles with precision-balanced weight. The everyday set trusted by clubs across America.</p>
-          <div class="product-features">
-            <span>166 Tiles</span><span>Double Engraved</span><span>Wooden Rack</span><span>Travel Case</span>
-          </div>
-          <div class="product-bottom">
-            <div class="product-price">$249 <small>USD</small></div>
-            <button class="btn-add" onclick="addToCart('The Classic', 249)">Add to Cart</button>
+          <h3>Mother of Pearl Luxe Set</h3>
+          <p class="product-desc">4-layer pearl white acrylic with iridescent shimmer. The ultimate heirloom-quality set for high-end retailers and wedding registries.</p>
+          <div class="product-price-row">
+            <span class="product-price">$43 – $65</span>
+            <span class="product-moq">/ set · MOQ 1</span>
           </div>
         </div>
       </div>
 
-      <!-- Product 3 -->
       <div class="product-card">
-        <div class="product-image" style="background:linear-gradient(135deg, #1e1c22, #2a2432);">
-          <span class="product-image-emoji">🌙</span>
-          <span class="product-badge">New</span>
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/H694d9b028b0244488f1fb4708d8f36d2D/In-Stock-Luxury-Deep-Teal-American-Mahjong.png?hasNWGrade=1" alt="Deep Teal Botanical Mahjong" loading="lazy">
         </div>
         <div class="product-body">
-          <h3>The Midnight</h3>
-          <p class="product-desc">Black tiles with white engraving for a striking contrast. Magnetic racks and a modern silhouette for the contemporary player.</p>
-          <div class="product-features">
-            <span>166 Tiles</span><span>Black Matte</span><span>Magnetic Rack</span><span>Aluminum Case</span>
-          </div>
-          <div class="product-bottom">
-            <div class="product-price">$299 <small>USD</small></div>
-            <button class="btn-add" onclick="addToCart('The Midnight', 299)">Add to Cart</button>
+          <h3>Teal Botanical Lucite Set</h3>
+          <p class="product-desc">Deep teal lucite with intricate botanical engravings. Peacock-blue accents and a matching velvet-lined carry case included.</p>
+          <div class="product-price-row">
+            <span class="product-price">$35 – $69</span>
+            <span class="product-moq">/ set · MOQ 1</span>
           </div>
         </div>
       </div>
 
-      <!-- Product 4 -->
       <div class="product-card">
-        <div class="product-image" style="background:linear-gradient(135deg, #221a1a, #2a2020);">
-          <span class="product-image-emoji">🎁</span>
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/H3339945c726b4305ad950a23ce96aabed/In-Stock-Luxury-White-Acrylic-American-Mahjong.png?hasNWGrade=1" alt="White Acrylic Gingham Set" loading="lazy">
+          <span class="product-badge">Value</span>
         </div>
         <div class="product-body">
-          <h3>The Traveler</h3>
-          <p class="product-desc">Compact mini tiles with a folding rack system. Full 166-tile set that fits in a backpack — never miss a game on the road.</p>
-          <div class="product-features">
-            <span>166 Mini Tiles</span><span>Folding Rack</span><span>Soft Case</span><span>3.8 lbs</span>
-          </div>
-          <div class="product-bottom">
-            <div class="product-price">$189 <small>USD</small></div>
-            <button class="btn-add" onclick="addToCart('The Traveler', 189)">Add to Cart</button>
+          <h3>Navy Gingham Cactus Set</h3>
+          <p class="product-desc">Playful navy-and-pink gingham tile backs with cactus bam motifs. Perfect for the younger, trend-conscious mahjong demographic.</p>
+          <div class="product-price-row">
+            <span class="product-price">$35 – $45</span>
+            <span class="product-moq">/ set · MOQ 1</span>
           </div>
         </div>
       </div>
 
-      <!-- Product 5 -->
-      <div class="product-card">
-        <div class="product-image" style="background:linear-gradient(135deg, #1c1a24, #262036);">
-          <span class="product-image-emoji">👑</span>
-        </div>
-        <div class="product-body">
-          <h3>The Heirloom</h3>
-          <p class="product-desc">Limited edition. Hand-carved tiles on genuine bone and bamboo with a mahogany storage chest. A family treasure for generations.</p>
-          <div class="product-features">
-            <span>166 Bone Tiles</span><span>Hand Carved</span><span>Mahogany Chest</span><span>Limited Run</span>
-          </div>
-          <div class="product-bottom">
-            <div class="product-price">$899 <small>USD</small></div>
-            <button class="btn-add" onclick="addToCart('The Heirloom', 899)">Add to Cart</button>
-          </div>
-        </div>
-      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Product 6 -->
-      <div class="product-card">
-        <div class="product-image" style="background:linear-gradient(135deg, #1e2224, #242c2e);">
-          <span class="product-image-emoji">🎓</span>
-          <span class="product-badge">Starter</span>
-        </div>
-        <div class="product-body">
-          <h3>The Beginner</h3>
-          <p class="product-desc">Everything a new player needs — color-coded tiles with large print numerals, an illustrated strategy guide, and a sturdy carry bag.</p>
-          <div class="product-features">
-            <span>166 Tiles</span><span>Large Print</span><span>Strategy Guide</span><span>Carry Bag</span>
+<!-- Categories -->
+<section class="section" id="categories" style="background:var(--bg-secondary);">
+  <div class="section-inner">
+    <div class="section-label">Shop by Category</div>
+    <h2 class="section-title">Everything Mahjong</h2>
+    <p class="section-subtitle">From complete sets to replacement tiles, racks, mats, bags, and tables — one source for your entire mahjong inventory.</p>
+    <div class="categories-grid">
+      <a href="https://zzamelia.en.alibaba.com/productgrouplist-964445351-1/Mahjong_Tiles.html" target="_blank" class="category-card">
+        <span class="category-icon">🀄</span>
+        <h4>Mahjong Tiles</h4>
+        <p>Custom acrylic, frosted, glitter, marble & more</p>
+      </a>
+      <a href="https://zzamelia.en.alibaba.com/productgrouplist-965755314-1/Custom_Mahjong.html" target="_blank" class="category-card">
+        <span class="category-icon">✨</span>
+        <h4>Custom Mahjong</h4>
+        <p>Your design, our craftsmanship</p>
+      </a>
+      <a href="https://zzamelia.en.alibaba.com/productgrouplist-964190627-1/Mahjong_Racks_Pushers.html" target="_blank" class="category-card">
+        <span class="category-icon">📏</span>
+        <h4>Racks & Pushers</h4>
+        <p>Wood, acrylic, magnetic, wavy designs</p>
+      </a>
+      <a href="https://zzamelia.en.alibaba.com/productgrouplist-965385824-1/Mahjong_Mat.html" target="_blank" class="category-card">
+        <span class="category-icon">🟫</span>
+        <h4>Mahjong Mats</h4>
+        <p>Premium table mats for the perfect game</p>
+      </a>
+      <a href="https://zzamelia.en.alibaba.com/productgrouplist-963610366-1/Mahjong_Bag.html" target="_blank" class="category-card">
+        <span class="category-icon">👜</span>
+        <h4>Mahjong Bags</h4>
+        <p>Luxury carry cases & travel bags</p>
+      </a>
+      <a href="https://zzamelia.en.alibaba.com/productgrouplist-964503100-1/Mahjong_Table.html" target="_blank" class="category-card">
+        <span class="category-icon">🪑</span>
+        <h4>Mahjong Tables</h4>
+        <p>Purpose-built gaming tables</p>
+      </a>
+      <a href="https://zzamelia.en.alibaba.com/productgrouplist-964353729-1/Mahjong_Accessories.html" target="_blank" class="category-card">
+        <span class="category-icon">🎲</span>
+        <h4>Accessories</h4>
+        <p>Dice, wind indicators, chips & more</p>
+      </a>
+      <a href="https://zzamelia.en.alibaba.com/productgrouplist-963782673-1/Hot_sales.html" target="_blank" class="category-card">
+        <span class="category-icon">🔥</span>
+        <h4>Hot Sales</h4>
+        <p>This month's top-selling items</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- OEM Section -->
+<section class="section" id="oem">
+  <div class="section-inner">
+    <div class="oem-grid">
+      <div class="oem-visual">
+        <img src="https://sc04.alicdn.com/kf/Hc8f00c6927444fcc9662d08094588829K.jpg" alt="Custom Mahjong OEM Process" loading="lazy">
+      </div>
+      <div>
+        <div class="section-label">OEM / ODM Services</div>
+        <h2 class="section-title" style="margin-bottom:20px;">Your Brand, Our Craft</h2>
+        <p style="color:var(--text-secondary);line-height:1.7;margin-bottom:4px;">We specialize in bringing boutique mahjong brands to life. From a single custom set to bulk production runs, our end-to-end OEM/ODM service handles everything.</p>
+        <div class="oem-steps">
+          <div class="oem-step">
+            <div class="oem-step-num">1</div>
+            <div class="oem-step-text">
+              <h5>Material & Style Selection</h5>
+              <p>Food-grade acrylic in Ice Clear, Frosted, Gold Leaf, Marble, Pearl, Glitter, Macaron, Morandi & Pantone custom colors.</p>
+            </div>
           </div>
-          <div class="product-bottom">
-            <div class="product-price">$149 <small>USD</small></div>
-            <button class="btn-add" onclick="addToCart('The Beginner', 149)">Add to Cart</button>
+          <div class="oem-step">
+            <div class="oem-step-num">2</div>
+            <div class="oem-step-text">
+              <h5>Custom Pattern & Engraving</h5>
+              <p>Custom Joker art, fonts, and tile backs. Deep CNC carving with hand-painted gold accents — every tile is a miniature artwork.</p>
+            </div>
+          </div>
+          <div class="oem-step">
+            <div class="oem-step-num">3</div>
+            <div class="oem-step-text">
+              <h5>Bespoke Case & Packaging</h5>
+              <p>Luxury cases with silk lining & gold hardware. Custom branding on boxes, bags, and all packaging — VIP unboxing experience guaranteed.</p>
+            </div>
+          </div>
+          <div class="oem-step">
+            <div class="oem-step-num">4</div>
+            <div class="oem-step-text">
+              <h5>Sample Approval & Production</h5>
+              <p>3D renders & physical prototypes for approval. 12-step hand polishing, rigorous QC, and certified fade-resistant durability.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -658,126 +593,66 @@ body {
   </div>
 </section>
 
-<!-- Features -->
+<!-- Why Us -->
 <section class="section" id="features">
   <div class="section-inner">
-    <div class="section-label">Why Mahjong Best</div>
-    <h2 class="section-title">Built for the American Game</h2>
-    <p class="section-subtitle">American Mahjong has its own rules, card, and rhythm. Every Mahjong Best set is purpose-built for the NMJL-standard game.</p>
+    <div class="section-label">Why Choose Vertex</div>
+    <h2 class="section-title">The Creative Powerhouse</h2>
+    <p class="section-subtitle">Why leading boutique brands and distributors across North America trust us for premium American Mahjong.</p>
     <div class="features-grid">
       <div class="feature-card">
-        <span class="feature-icon">🀄</span>
-        <h4>Full 166-Tile Set</h4>
-        <p>Includes all 8 jokers, flowers, and seasons — exactly what the NMJL card demands. No substitutions, no missing pieces.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">✨</span>
-        <h4>Precision Engraving</h4>
-        <p>Dual-layer CNC engraving with paint fill that never fades. Tiles are readable from across the table in any light.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🪵</span>
-        <h4>Solid Hardwood Racks</h4>
-        <p>Walnut and maple racks with a push-bar mechanism and felt-lined tile channel. Designed to last decades.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">📦</span>
-        <h4>Free US Shipping</h4>
-        <p>Every set ships free within the continental US. Arrives in 3–5 business days with full insurance and tracking.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🔄</span>
-        <h4>NMJL Card Included</h4>
-        <p>Each set comes with the current year's National Mah Jongg League standard hands card. Ready to play right out of the box.</p>
-      </div>
-      <div class="feature-card">
         <span class="feature-icon">🎨</span>
-        <h4>Color-Coded Winds</h4>
-        <p>East-West-North-South tiles are subtly tinted for instant recognition — speeds up play without being distracting.</p>
+        <h4>Trend-Forward Design</h4>
+        <p>21–30 R&D specialists tracking US interior and fashion trends to create tiles that match modern aesthetics.</p>
       </div>
       <div class="feature-card">
         <span class="feature-icon">🛡️</span>
-        <h4>Lifetime Warranty</h4>
-        <p>We stand behind every tile and rack. Manufacturing defects are covered for the life of the product. No questions asked.</p>
+        <h4>100% IP Safety</h4>
+        <p>Every pattern is original. Your brand stays completely protected from legal disputes — guaranteed.</p>
       </div>
       <div class="feature-card">
-        <span class="feature-icon">🌎</span>
-        <h4>Veteran-Owned</h4>
-        <p>Founded by competitive players who've played at tournaments from Las Vegas to Atlantic City. We build what we play with.</p>
+        <span class="feature-icon">💎</span>
+        <h4>Master Craftsmanship</h4>
+        <p>From laser engraving depth to hand-polish glossiness — we define the industry standard for luxury.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">📦</span>
+        <h4>MOQ 1, No Minimum</h4>
+        <p>Start with a single sample set. Test the market, then scale. No minimum order requirements.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">⚡</span>
+        <h4>7-Day Sampling</h4>
+        <p>From design approval to physical prototype in 7 business days. Fast iteration to get your product right.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔍</span>
+        <h4>Rigorous QC</h4>
+        <p>31–40 QC inspectors. 12-step hand polishing. Every tile checked for edge smoothness, print clarity, and color consistency.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- About -->
-<section class="section" id="about">
+<!-- Stats -->
+<section class="section" id="stats">
   <div class="section-inner">
-    <div class="about-grid">
-      <div class="about-image">🀄</div>
-      <div class="about-text">
-        <div class="section-label">Our Story</div>
-        <h3>Crafting Excellence Since 2018</h3>
-        <p>Mahjong Best was born at a mahjong table. After years of playing with sets that felt disposable — thin tiles, wobbly racks, fading prints — we decided to build something better.</p>
-        <p>We partnered with a family-run workshop with three generations of tile-making heritage. Together, we engineered every component — from tile weight distribution to rack ergonomics — to meet the exacting standards of American tournament play.</p>
-        <p>Today, Mahjong Best sets are played in clubs across 38 states and have been the official set at four national tournaments. But we measure success differently: a Mahjong Best set should still be in play 20 years from now.</p>
-        <div class="about-stats">
-          <div class="about-stat">
-            <div class="about-stat-number">15K+</div>
-            <div class="about-stat-label">Sets Sold</div>
-          </div>
-          <div class="about-stat">
-            <div class="about-stat-number">38</div>
-            <div class="about-stat-label">States</div>
-          </div>
-          <div class="about-stat">
-            <div class="about-stat-number">4.9</div>
-            <div class="about-stat-label">Avg Rating</div>
-          </div>
-        </div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">90%</div>
+        <div class="stat-label">North American Market Share</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- Testimonials -->
-<section class="section" id="testimonials">
-  <div class="section-inner">
-    <div class="section-label">Testimonials</div>
-    <h2 class="section-title">What Players Say</h2>
-    <p class="section-subtitle">From club regulars to tournament champions — hear why they chose Mahjong Best.</p>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"I've played with dozens of sets over 30 years. The Imperial is hands down the best American Mahjong set I've ever touched. The tile weight is perfect."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">JD</div>
-          <div>
-            <div class="testimonial-name">Janet D.</div>
-            <div class="testimonial-role">Club President, Boston MA</div>
-          </div>
-        </div>
+      <div class="stat-card">
+        <div class="stat-number">200+</div>
+        <div class="stat-label">Employees</div>
       </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"The Beginner set made learning so much easier. The large-print tiles and the strategy guide got our whole group up to speed in two sessions. Worth every penny."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">MR</div>
-          <div>
-            <div class="testimonial-name">Michael R.</div>
-            <div class="testimonial-role">New Player, Austin TX</div>
-          </div>
-        </div>
+      <div class="stat-card">
+        <div class="stat-number">30</div>
+        <div class="stat-label">R&D Designers</div>
       </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"Ordered the Midnight set for our tournament — 24 tables, zero complaints. The magnetic racks were a game-changer for fast-paced competitive play."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">SK</div>
-          <div>
-            <div class="testimonial-name">Sarah K.</div>
-            <div class="testimonial-role">Tournament Director, Chicago IL</div>
-          </div>
-        </div>
+      <div class="stat-card">
+        <div class="stat-number">7 Days</div>
+        <div class="stat-label">Sample Turnaround</div>
       </div>
     </div>
   </div>
@@ -787,12 +662,15 @@ body {
 <section class="section" id="shop">
   <div class="section-inner">
     <div class="cta-banner">
-      <h2>Ready to Elevate Your Game?</h2>
-      <p>Join 15,000+ players who chose Mahjong Best. Free shipping on all orders over $199.</p>
+      <h2>Ready to Create Your Collection?</h2>
+      <p>Whether you need one custom set or a full product line, we're here to make it happen. MOQ 1, 7-day sampling, IP-safe patterns.</p>
       <div class="newsletter-form">
-        <input type="email" placeholder="Enter your email for 10% off your first order" id="newsletterEmail">
-        <button onclick="subscribeNewsletter()">Get My Discount</button>
+        <input type="email" placeholder="Enter your email for a free design consultation" id="newsletterEmail">
+        <button onclick="subscribeNewsletter()">Get Started</button>
       </div>
+      <p style="margin-top:20px;font-size:0.85rem;color:var(--text-muted);">
+        Or browse our full catalog on <a href="https://zzamelia.en.alibaba.com/" target="_blank" style="color:var(--gold);text-decoration:none;">Alibaba.com →</a>
+      </p>
     </div>
   </div>
 </section>
@@ -803,162 +681,69 @@ body {
     <div class="footer-grid">
       <div>
         <div class="footer-brand">🀄 Mahjong Best</div>
-        <p class="footer-desc">Premium American Mahjong sets handcrafted for players who demand the best. Proudly serving the US mahjong community since 2018.</p>
+        <p class="footer-desc">A brand of Zaozhuang Vertex International Trade Co., Ltd. Premium American Mahjong — design-driven, IP-safe, crafted for boutique brands since 2021.</p>
       </div>
       <div class="footer-col">
-        <h4>Shop</h4>
+        <h4>Products</h4>
         <ul>
-          <li><a href="#products">All Sets</a></li>
-          <li><a href="#">Accessories</a></li>
-          <li><a href="#">Replacement Tiles</a></li>
-          <li><a href="#">NMJL Cards</a></li>
-          <li><a href="#">Gift Cards</a></li>
+          <li><a href="https://zzamelia.en.alibaba.com/productgrouplist-964445351-1/Mahjong_Tiles.html" target="_blank">Mahjong Tiles</a></li>
+          <li><a href="https://zzamelia.en.alibaba.com/productgrouplist-964190627-1/Mahjong_Racks_Pushers.html" target="_blank">Racks & Pushers</a></li>
+          <li><a href="https://zzamelia.en.alibaba.com/productgrouplist-965385824-1/Mahjong_Mat.html" target="_blank">Mahjong Mats</a></li>
+          <li><a href="https://zzamelia.en.alibaba.com/productgrouplist-963610366-1/Mahjong_Bag.html" target="_blank">Mahjong Bags</a></li>
+          <li><a href="https://zzamelia.en.alibaba.com/productgrouplist-964503100-1/Mahjong_Table.html" target="_blank">Mahjong Tables</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Support</h4>
+        <h4>Services</h4>
         <ul>
-          <li><a href="#">Shipping & Returns</a></li>
-          <li><a href="#">Warranty</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="#oem">OEM / ODM</a></li>
+          <li><a href="#">Custom Design</a></li>
           <li><a href="#">Wholesale</a></li>
+          <li><a href="#">Shipping & Logistics</a></li>
+          <li><a href="https://zzamelia.en.alibaba.com/contactinfo.html" target="_blank">Contact Us</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
         <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">YouTube</a></li>
-          <li><a href="#">Tournament Calendar</a></li>
+          <li><a href="https://zzamelia.en.alibaba.com/" target="_blank">Alibaba Store</a></li>
+          <li><a href="https://wa.me/8618669693290" target="_blank">WhatsApp</a></li>
+          <li><a href="mailto:yale@mahjongbest.com">Email</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-bottom-text">&copy; 2026 Mahjong Best. All rights reserved.</span>
+      <span class="footer-bottom-text">&copy; 2026 Zaozhuang Vertex International Trade Co., Ltd. All rights reserved. mahjongbest.com</span>
       <div class="footer-payment">
-        <span title="Visa">💳</span>
-        <span title="Mastercard">💳</span>
-        <span title="Amex">💳</span>
-        <span title="PayPal">💳</span>
+        <span>💳</span><span>💳</span><span>💳</span><span>💳</span>
       </div>
     </div>
   </div>
 </footer>
 
-<script>
-// ── Cart State ──
-let cart = [];
-
-function updateCartUI() {
-  const count = cart.reduce((sum, item) => sum + item.qty, 0);
-  const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-  
-  const countEl = document.getElementById('cartCount');
-  countEl.textContent = count;
-  if (count > 0) { countEl.classList.add('active'); }
-  else { countEl.classList.remove('active'); }
-  
-  document.getElementById('cartTotal').textContent = '$' + total.toLocaleString();
-  
-  const itemsEl = document.getElementById('cartItems');
-  if (cart.length === 0) {
-    itemsEl.innerHTML = '<div class="cart-empty">Your cart is empty</div>';
-  } else {
-    itemsEl.innerHTML = cart.map((item, i) => `
-      <div class="cart-item">
-        <div class="cart-item-img">🀄</div>
-        <div class="cart-item-info">
-          <div class="cart-item-name">${item.name}</div>
-          <div class="cart-item-price">$${item.price.toLocaleString()}</div>
-          <div class="cart-item-qty">
-            <button onclick="updateQty(${i}, -1)">−</button>
-            <span>${item.qty}</span>
-            <button onclick="updateQty(${i}, 1)">+</button>
-          </div>
-        </div>
-      </div>
-    `).join('');
-  }
-}
-
-function addToCart(name, price) {
-  const existing = cart.find(item => item.name === name);
-  if (existing) { existing.qty++; }
-  else { cart.push({ name, price, qty: 1 }); }
-  updateCartUI();
-  showToast(`Added "${name}" to cart`);
-  // Auto-open cart
-  document.getElementById('cartSidebar').classList.add('open');
-  document.getElementById('cartOverlay').classList.add('open');
-}
-
-function updateQty(index, delta) {
-  cart[index].qty += delta;
-  if (cart[index].qty <= 0) { cart.splice(index, 1); }
-  updateCartUI();
-}
-
-function toggleCart() {
-  const sidebar = document.getElementById('cartSidebar');
-  const overlay = document.getElementById('cartOverlay');
-  sidebar.classList.toggle('open');
-  overlay.classList.toggle('open');
-}
-
-function showToast(msg) {
-  const toast = document.getElementById('toast');
-  toast.textContent = msg;
-  toast.classList.add('show');
-  clearTimeout(toast._timeout);
-  toast._timeout = setTimeout(() => toast.classList.remove('show'), 2400);
-}
-
-function subscribeNewsletter() {
-  const email = document.getElementById('newsletterEmail').value.trim();
-  if (!email) { showToast('Please enter your email address'); return; }
-  showToast('🎉 Thanks! Your 10% discount code has been sent to ' + email);
-  document.getElementById('newsletterEmail').value = '';
-}
-
-function toggleMobileMenu() {
-  document.getElementById('navLinks').classList.toggle('mobile-open');
-}
-
-// Close mobile menu on link click
-document.querySelectorAll('#navLinks a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.getElementById('navLinks').classList.remove('mobile-open');
-  });
-});
-</script>
-
-<!-- ── WhatsApp Floating Button ── -->
+<!-- WhatsApp Float -->
 <a href="https://wa.me/8618669693290" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 32 32" width="28" height="28" fill="white">
     <path d="M16 0C7.164 0 0 7.164 0 16c0 2.817.733 5.547 2.125 7.964L.526 31.474l7.685-1.55A15.94 15.94 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.35c-2.456 0-4.832-.646-6.913-1.87l-.496-.293-4.56.92.973-4.444-.323-.513A13.302 13.302 0 012.65 16C2.65 8.636 8.636 2.65 16 2.65S29.35 8.636 29.35 16 23.364 29.35 16 29.35zm7.422-9.625c-.091-.15-.333-.24-.695-.42-.362-.18-2.14-1.057-2.472-1.178-.332-.12-.574-.18-.815.182-.242.361-.935 1.178-1.146 1.42-.211.24-.423.27-.785.09-.362-.18-1.53-.564-2.915-1.8-1.077-.96-1.805-2.147-2.017-2.51-.21-.362-.022-.558.16-.738.162-.162.362-.423.543-.635.18-.21.24-.362.362-.603.12-.242.06-.453-.03-.635-.09-.18-.815-1.962-1.117-2.686-.294-.706-.594-.61-.815-.62-.21-.01-.453-.013-.695-.013-.24 0-.635.09-.966.453-.332.362-1.268 1.24-1.268 3.022 0 1.78 1.298 3.505 1.48 3.746.18.24 2.554 3.898 6.19 5.467.864.374 1.54.597 2.066.764.868.276 1.66.237 2.284.144.697-.104 2.14-.875 2.442-1.72.302-.845.302-1.57.21-1.72z"/>
   </svg>
 </a>
 
-<style>
-.whatsapp-float {
-  position: fixed; bottom: 32px; right: 32px; z-index: 1500;
-  width: 60px; height: 60px; border-radius: 50%;
-  background: #25D366;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
-  transition: transform 0.25s, box-shadow 0.25s;
-  text-decoration: none;
+<script>
+function toggleMobileMenu() {
+  document.getElementById('navLinks').classList.toggle('mobile-open');
 }
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
+document.querySelectorAll('#navLinks a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('mobile-open');
+  });
+});
+function subscribeNewsletter() {
+  const email = document.getElementById('newsletterEmail').value.trim();
+  if (!email) { alert('Please enter your email address.'); return; }
+  alert('Thanks! We\'ll reach out within 24 hours to discuss your custom mahjong collection.');
+  document.getElementById('newsletterEmail').value = '';
 }
-@media (max-width: 640px) {
-  .whatsapp-float { bottom: 20px; right: 20px; width: 52px; height: 52px; }
-}
-</style>
+</script>
 
 </body>
 </html>
