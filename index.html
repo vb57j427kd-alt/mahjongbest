@@ -247,21 +247,6 @@ body {
 .product-price { font-size: 1.3rem; font-weight: 700; color: var(--gold); }
 .product-moq { color: var(--text-muted); font-size: 0.8rem; }
 
-/* Categories */
-.categories-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.category-card {
-  background: var(--bg-card); border: 1px solid var(--border-light);
-  border-radius: 14px; padding: 32px 24px; text-align: center;
-  transition: border-color 0.3s, transform 0.3s;
-  text-decoration: none; display: block;
-}
-.category-card:hover {
-  border-color: var(--gold-dark); transform: translateY(-3px);
-}
-.category-icon { font-size: 2.4rem; margin-bottom: 14px; display: block; }
-.category-card h4 { font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary); }
-.category-card p { color: var(--text-muted); font-size: 0.85rem; margin-top: 6px; }
-
 /* Features */
 #features { background: var(--bg-secondary); }
 .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
@@ -370,7 +355,6 @@ body {
   .hero-buttons { justify-content: center; }
   .hero-visual img { max-width: 320px; }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
-  .categories-grid { grid-template-columns: repeat(2, 1fr); }
   .features-grid { grid-template-columns: repeat(2, 1fr); }
   .oem-grid { grid-template-columns: 1fr; gap: 40px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -387,7 +371,6 @@ body {
   .hero h1 { font-size: 2.2rem; }
   .section-title { font-size: 2rem; }
   .products-grid { grid-template-columns: 1fr; }
-  .categories-grid { grid-template-columns: 1fr 1fr; }
   .features-grid { grid-template-columns: 1fr; }
   .hero { min-height: auto; }
   .cta-banner { padding: 40px 24px; }
@@ -408,8 +391,9 @@ body {
       Mahjong Best
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#products">Collection</a></li>
-      <li><a href="#categories">All Products</a></li>
+      <li><a href="#tiles">Tiles</a></li>
+      <li><a href="#racks">Racks</a></li>
+      <li><a href="#bags">Bags</a></li>
       <li><a href="#oem">OEM/ODM</a></li>
       <li><a href="#features">Why Us</a></li>
       <li><a href="#shop" class="nav-cta">Get a Quote</a></li>
@@ -545,52 +529,199 @@ body {
   </div>
 </section>
 
-<!-- Categories -->
-<section class="section" id="categories" style="background:var(--bg-secondary);">
+<!-- Mahjong Tiles -->
+<section class="section" id="tiles" style="background:var(--bg-secondary);">
   <div class="section-inner">
-    <div class="section-label">Shop by Category</div>
-    <h2 class="section-title">Everything Mahjong</h2>
-    <p class="section-subtitle">From complete sets to replacement tiles, racks, mats, bags, and tables — one source for your entire mahjong inventory.</p>
-    <div class="categories-grid">
-      <div class="category-card">
-        <span class="category-icon">🀄</span>
-        <h4>Mahjong Tiles</h4>
-        <p>Custom acrylic, frosted, glitter, marble & more</p>
+    <div class="section-label">Mahjong Tiles</div>
+    <h2 class="section-title">Full Tile Sets</h2>
+    <p class="section-subtitle">160-piece acrylic mahjong sets with custom engraving. 4-layer crystal, melamine, pearl luster — every style in stock.</p>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/Hf222569df8f04b1d8a464c53c29930a6W/Luxury-Emerald-Green-American-Mahjong-Set-Custom.jpg?hasNWGrade=1" alt="Emerald Green Koi Fish Mahjong" width="400" height="280" loading="lazy" decoding="async">
+          <span class="product-badge">Hot</span>
+        </div>
+        <div class="product-body">
+          <h3>Emerald Green Koi Fish Set</h3>
+          <p class="product-desc">Luxury emerald acrylic with hand-painted koi fish winds and whimsical joker art. Premium designer board game.</p>
+          <div class="product-price-row"><span class="product-price">$60 – $69</span><span class="product-moq">/ set · MOQ 1</span></div>
+        </div>
       </div>
-      <div class="category-card">
-        <span class="category-icon">✨</span>
-        <h4>Custom Mahjong</h4>
-        <p>Your design, our craftsmanship</p>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/Hab4a44ce97bc49c08fe53c8af1670e3fo/Pearlescent-Wholesale-Custom-Modern-Portable-Carved-160.png?hasNWGrade=1" alt="Pearlescent Mahjong Set" width="400" height="280" loading="lazy" decoding="async">
+        </div>
+        <div class="product-body">
+          <h3>Pearlescent Wholesale Set</h3>
+          <p class="product-desc">Modern portable 160-piece set with pearl luster 4-layer luxury acrylic crystal. Best value for boutique orders.</p>
+          <div class="product-price-row"><span class="product-price">$45 – $65</span><span class="product-moq">/ set · MOQ 2</span></div>
+        </div>
       </div>
-      <div class="category-card">
-        <span class="category-icon">📏</span>
-        <h4>Racks & Pushers</h4>
-        <p>Wood, acrylic, magnetic, wavy designs</p>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/Hd5ab430386964551a6c5b79457a04cc2Y/Luxury-Aesthetic-Paris-Pink-American-Mahjong-Set.jpg?hasNWGrade=1" alt="Paris Pink Mahjong Set" width="400" height="280" loading="lazy" decoding="async">
+          <span class="product-badge">New</span>
+        </div>
+        <div class="product-body">
+          <h3>Paris Pink French Set</h3>
+          <p class="product-desc">Aesthetic Paris pink acrylic with scratch-resistant crystal. Featuring French-inspired design — Instagram trending style.</p>
+          <div class="product-price-row"><span class="product-price">$43 – $65</span><span class="product-moq">/ set · MOQ 2</span></div>
+        </div>
       </div>
-      <div class="category-card">
-        <span class="category-icon">🟫</span>
-        <h4>Mahjong Mats</h4>
-        <p>Premium table mats for the perfect game</p>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/H1e84cdae2e564260859d0f0f46303cfce/In-Stock-Heritage-Mahjong-Tiles-Luxury-Modern.jpg?hasNWGrade=1" alt="Heritage Mahjong Tiles" width="400" height="280" loading="lazy" decoding="async">
+        </div>
+        <div class="product-body">
+          <h3>Heritage Luxury Set</h3>
+          <p class="product-desc">Four-layer acrylic with handmade carved American tiles. Hot-selling classic design for chess and card game enthusiasts.</p>
+          <div class="product-price-row"><span class="product-price">$45 – $65</span><span class="product-moq">/ set · MOQ 1</span></div>
+        </div>
       </div>
-      <div class="category-card">
-        <span class="category-icon">👜</span>
-        <h4>Mahjong Bags</h4>
-        <p>Luxury carry cases & travel bags</p>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/H5e4a8b80f9fa412bbab026e74cad3662m/Heritage-American-Automatic-Mahjong-Set-160-Acrylic.png?hasNWGrade=1" alt="Sage Green Automatic Mahjong" width="400" height="280" loading="lazy" decoding="async">
+        </div>
+        <div class="product-body">
+          <h3>Sage Green Automatic Set</h3>
+          <p class="product-desc">Heritage American 160-tile set in sage green with burl wood print. Includes dice, coin bag, ceramic tape.</p>
+          <div class="product-price-row"><span class="product-price">$60 – $68</span><span class="product-moq">/ set · MOQ 1</span></div>
+        </div>
       </div>
-      <div class="category-card">
-        <span class="category-icon">🪑</span>
-        <h4>Mahjong Tables</h4>
-        <p>Purpose-built gaming tables</p>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/H1c9f694a92ae4d98ab39d515246b82f4B/Wholesale-Standard-Classic-Navy-Blue-American-Mahjong.png?hasNWGrade=1" alt="Navy Blue Classic Mahjong" width="400" height="280" loading="lazy" decoding="async">
+          <span class="product-badge">Value</span>
+        </div>
+        <div class="product-body">
+          <h3>Navy Blue Classic Set</h3>
+          <p class="product-desc">Standard classic navy 160 acrylic tiles. Eco-friendly, durable, 4-player family game — wholesale ready.</p>
+          <div class="product-price-row"><span class="product-price">$39 – $45</span><span class="product-moq">/ set · MOQ 1</span></div>
+        </div>
       </div>
-      <div class="category-card">
-        <span class="category-icon">🎲</span>
-        <h4>Accessories</h4>
-        <p>Dice, wind indicators, chips & more</p>
+    </div>
+  </div>
+</section>
+
+<!-- Racks & Pushers -->
+<section class="section" id="racks">
+  <div class="section-inner">
+    <div class="section-label">Racks & Pushers</div>
+    <h2 class="section-title">Tile Racks & Pushers</h2>
+    <p class="section-subtitle">Wood, acrylic, and magnetic racks in 17.5" to 20" sizes. Two-in-one designs, wavy styles, tortoiseshell colors — matching any tile set.</p>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/H00cf2d1e9ac44e12b9a34e6c5937aecf9/Luxury-Solid-Wood-Mahjong-Tile-Ruler-Rack.png_480x480.jpg?hasNWGrade=1" alt="Solid Wood Mahjong Rack" width="400" height="280" loading="lazy" decoding="async">
+          <span class="product-badge">Bestseller</span>
+        </div>
+        <div class="product-body">
+          <h3>Solid Wood Ruler & Rack</h3>
+          <p class="product-desc">Luxury solid wood mahjong tile rack for American and Jewish tile arrangement. 18-inch, magnetic suction.</p>
+          <div class="product-price-row"><span class="product-price">$8.91</span><span class="product-moq">/ piece · MOQ 1</span></div>
+        </div>
       </div>
-      <div class="category-card">
-        <span class="category-icon">🔥</span>
-        <h4>Hot Sales</h4>
-        <p>This month's top-selling items</p>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/H61d6da913e3c4d959b08bfe26e3b3aa4V/Luxury-Acrylic-Wavy-Mahjong-Table-Rack-Magnetic.png_480x480.jpg?hasNWGrade=1" alt="Wavy Acrylic Mahjong Rack" width="400" height="280" loading="lazy" decoding="async">
+        </div>
+        <div class="product-body">
+          <h3>Wavy Tortoiseshell Rack</h3>
+          <p class="product-desc">Luxury acrylic wavy table rack with magnetic attachment. American style tortoiseshell color, 4-player packaging.</p>
+          <div class="product-price-row"><span class="product-price">$3.60 – $72</span><span class="product-moq">/ set · MOQ 1</span></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/Ha64a79b625dc49a3888fa161d636d51fp/Apexplay-Luxury-Mahjong-Ruler-Wooden-American-4.png?hasNWGrade=1" alt="Wooden Mahjong Ruler" width="400" height="280" loading="lazy" decoding="async">
+        </div>
+        <div class="product-body">
+          <h3>Apexplay Wooden Ruler Set</h3>
+          <p class="product-desc">Luxury wooden American 4-piece 18-inch rack with pusher. Two-in-one card ruler design.</p>
+          <div class="product-price-row"><span class="product-price">$27.90 – $36</span><span class="product-moq">/ piece · MOQ 1</span></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/H05ce87a4a8d44bfca6a773d336f16558b/Luxury-America-Mahjong-Rack-Pusher-Set-Clear.jpg?hasNWGrade=1" alt="Clear PS Acrylic Rack Set" width="400" height="280" loading="lazy" decoding="async">
+        </div>
+        <div class="product-body">
+          <h3>Clear Acrylic Rack Set</h3>
+          <p class="product-desc">Luxury clear PS acrylic mahjong rack pusher set. Leisure entertainment aid tool for tile organization.</p>
+          <div class="product-price-row"><span class="product-price">$10.35 – $12.60</span><span class="product-moq">/ set · MOQ 1</span></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/H423ed87c65554d9782fa8d6bf5f12bb1a/17-5-inch-Luxury-Multi-Color-Acrylic.png?hasNWGrade=1" alt="Multi-Color Magnetic Rack" width="400" height="280" loading="lazy" decoding="async">
+          <span class="product-badge">New</span>
+        </div>
+        <div class="product-body">
+          <h3>Multi-Color Magnetic Set</h3>
+          <p class="product-desc">17.5-inch luxury multi-color acrylic magnetic racks and pushers. 4-player, perfect for family game nights.</p>
+          <div class="product-price-row"><span class="product-price">$40 – $70</span><span class="product-moq">/ set · MOQ 1</span></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/H494294837da64575a836c07a8f4b5bc5G/Luxury-Wooden-Mahjong-Ruler-18-Inch-Magnetic.png?hasNWGrade=1" alt="Magnetic Wooden Ruler" width="400" height="280" loading="lazy" decoding="async">
+        </div>
+        <div class="product-body">
+          <h3>Magnetic Wooden Ruler</h3>
+          <p class="product-desc">Luxury 18-inch wooden mahjong ruler with magnetic suction. American style rack card tiles pusher set.</p>
+          <div class="product-price-row"><span class="product-price">$49.50</span><span class="product-moq">/ set · MOQ 1</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mahjong Bags -->
+<section class="section" id="bags" style="background:var(--bg-secondary);">
+  <div class="section-inner">
+    <div class="section-label">Mahjong Bags</div>
+    <h2 class="section-title">Carry Cases & Storage</h2>
+    <p class="section-subtitle">Eco-friendly PVC, silk brocade, double-layer drawstring — premium storage solutions for your mahjong sets.</p>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/Hc951bdd780c54517967e6a572afc5c17q/Luxury-Eco-Friendly-PVC-Four-Person-Texas.jpg_480x480.jpg?hasNWGrade=1" alt="PVC Mahjong Tote Bag" width="400" height="280" loading="lazy" decoding="async">
+        </div>
+        <div class="product-body">
+          <h3>Luxury Eco PVC Tote</h3>
+          <p class="product-desc">Four-person Texas Hold'em poker mahjong storage tote bag. High quality modern foldable design.</p>
+          <div class="product-price-row"><span class="product-price">$4.50 – $7.20</span><span class="product-moq">/ piece · MOQ 1</span></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/H4ca1e0cdfb584c1c8dc6f70c5cf5bd0dB/Large-Double-Layer-Drawstring-Mahjong-Bag-Purse.jpg_480x480.jpg?hasNWGrade=1" alt="Silk Brocade Mahjong Bag" width="400" height="280" loading="lazy" decoding="async">
+        </div>
+        <div class="product-body">
+          <h3>Silk Brocade Drawstring</h3>
+          <p class="product-desc">Large double-layer drawstring bag with silk pocket and brocade embroidery. Chinese style storage pouch.</p>
+          <div class="product-price-row"><span class="product-price">$4 – $4.50</span><span class="product-moq">/ piece · MOQ 3</span></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://s.alicdn.com/@sc04/kf/H1719cde459e449219542b6da651134cdO/Environmental-Protection-Material-Four-Person-Texas-Hold.jpg_480x480.jpg?hasNWGrade=1" alt="Eco Tote Bag" width="400" height="280" loading="lazy" decoding="async">
+        </div>
+        <div class="product-body">
+          <h3>Eco Protection Tote</h3>
+          <p class="product-desc">Environmental protection material four-person storage tote bag. High quality modern foldable, multipurpose.</p>
+          <div class="product-price-row"><span class="product-price">$4.50 – $7.20</span><span class="product-moq">/ piece · MOQ 1</span></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap" style="background:linear-gradient(135deg, var(--bg-elevated), var(--bg-card));display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:4rem;">👜</span>
+        </div>
+        <div class="product-body">
+          <h3>Custom Branded Carry Case</h3>
+          <p class="product-desc">Full custom OEM bags with your logo — silk-lined luxury cases, velvet pouches, and travel bags. MOQ negotiable.</p>
+          <div class="product-price-row"><span class="product-price">Custom Quote</span><span class="product-moq">· OEM available</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -736,10 +867,9 @@ body {
         <h4>Products</h4>
         <ul>
           <li><a href="#products">Mahjong Sets</a></li>
-          <li><a href="#categories">Racks & Pushers</a></li>
-          <li><a href="#categories">Mahjong Mats</a></li>
-          <li><a href="#categories">Mahjong Bags</a></li>
-          <li><a href="#categories">Mahjong Tables</a></li>
+          <li><a href="#tiles">More Tiles</a></li>
+          <li><a href="#racks">Racks & Pushers</a></li>
+          <li><a href="#bags">Mahjong Bags</a></li>
         </ul>
       </div>
       <div class="footer-col">
