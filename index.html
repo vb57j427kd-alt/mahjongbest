@@ -934,5 +934,31 @@ document.querySelectorAll('#navLinks a').forEach(link => {
 });
 </script>
 
+<!-- ── WhatsApp Floating Button ── -->
+<a href="https://wa.me/8618669693290" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="white">
+    <path d="M16 0C7.164 0 0 7.164 0 16c0 2.817.733 5.547 2.125 7.964L.526 31.474l7.685-1.55A15.94 15.94 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.35c-2.456 0-4.832-.646-6.913-1.87l-.496-.293-4.56.92.973-4.444-.323-.513A13.302 13.302 0 012.65 16C2.65 8.636 8.636 2.65 16 2.65S29.35 8.636 29.35 16 23.364 29.35 16 29.35zm7.422-9.625c-.091-.15-.333-.24-.695-.42-.362-.18-2.14-1.057-2.472-1.178-.332-.12-.574-.18-.815.182-.242.361-.935 1.178-1.146 1.42-.211.24-.423.27-.785.09-.362-.18-1.53-.564-2.915-1.8-1.077-.96-1.805-2.147-2.017-2.51-.21-.362-.022-.558.16-.738.162-.162.362-.423.543-.635.18-.21.24-.362.362-.603.12-.242.06-.453-.03-.635-.09-.18-.815-1.962-1.117-2.686-.294-.706-.594-.61-.815-.62-.21-.01-.453-.013-.695-.013-.24 0-.635.09-.966.453-.332.362-1.268 1.24-1.268 3.022 0 1.78 1.298 3.505 1.48 3.746.18.24 2.554 3.898 6.19 5.467.864.374 1.54.597 2.066.764.868.276 1.66.237 2.284.144.697-.104 2.14-.875 2.442-1.72.302-.845.302-1.57.21-1.72z"/>
+  </svg>
+</a>
+
+<style>
+.whatsapp-float {
+  position: fixed; bottom: 32px; right: 32px; z-index: 1500;
+  width: 60px; height: 60px; border-radius: 50%;
+  background: #25D366;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+  transition: transform 0.25s, box-shadow 0.25s;
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
+}
+@media (max-width: 640px) {
+  .whatsapp-float { bottom: 20px; right: 20px; width: 52px; height: 52px; }
+}
+</style>
+
 </body>
 </html>
