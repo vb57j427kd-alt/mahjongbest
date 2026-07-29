@@ -90,7 +90,20 @@ body{font-family:var(--fb);background:var(--bg);color:var(--t1);line-height:1.6}
 <div class="form-group"><label>Shipping Address *</label><input type="text" id="orderAddress" placeholder="123 Main St, Apt 4B" required></div>
 <div class="form-group"><label>City / State / ZIP *</label><input type="text" id="orderCityZip" placeholder="New York, NY 10001" required></div>
 <div class="form-actions"><button type="button" class="btn-cancel" onclick="closeOrder()">Cancel</button><button type="submit" class="btn-submit">Submit Order</button></div></form></div>
-<div class="order-success" id="orderSuccess"><div class="check-icon">✅</div><h4>Order Submitted!</h4><p>Your order details have been sent. We will contact you within 24 hours via WhatsApp or email.</p><p style="margin-top:12px;font-size:.85rem;color:var(--text-muted);">A WhatsApp message has been opened — please send it to complete your order.</p><button class="btn-submit" style="margin-top:20px;width:100%;" onclick="closeOrder()">Close</button></div>
+<div class="order-success" id="orderSuccess"><div class="check-icon">✅</div><h4>Order Submitted!</h4><p style="margin-bottom:4px;">Your order details have been sent to us. Please complete payment using the bank details below.</p>
+<div style="background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:18px;margin:18px 0;text-align:left;font-size:.82rem;line-height:1.7;">
+<div style="color:var(--gold);font-weight:600;margin-bottom:10px;font-size:.9rem;">🏦 Bank Transfer Details</div>
+<div><span style="color:var(--t3);">Beneficiary Name:</span> <span style="color:var(--t1);">Linyi Strawberry International Trade Co., Ltd</span></div>
+<div><span style="color:var(--t3);">Account Number:</span> <span style="color:var(--t1);font-weight:600;">63003927994</span></div>
+<div><span style="color:var(--t3);">Swift Code:</span> <span style="color:var(--t1);">CHASHKHH / CHASHKHHXXX</span></div>
+<div><span style="color:var(--t3);">Country/Region:</span> <span style="color:var(--t1);">Hong Kong</span></div>
+<div><span style="color:var(--t3);">Address:</span> <span style="color:var(--t1);font-size:.78rem;">26/F Tower One, Times Square, 1 Matheson Street, Causeway Bay, HK</span></div>
+<div style="margin-top:8px;"><span style="color:var(--t3);">Bank:</span> <span style="color:var(--t1);">JPMorgan Chase Bank, N.A., Hong Kong Branch</span></div>
+<div><span style="color:var(--t3);">Bank Code:</span> <span style="color:var(--t1);">007 &nbsp;|&nbsp;</span><span style="color:var(--t3);">Branch:</span> <span style="color:var(--t1);">863</span></div>
+</div>
+<p style="font-size:.78rem;color:var(--t3);line-height:1.5;margin-bottom:8px;"><strong style="color:var(--gold);">USD Payments:</strong> Recommend using US J.P. Morgan (CHASUS33) as transit bank to reduce forex risk. This account cannot receive payments from Russia and Belarus.</p>
+<p style="font-size:.82rem;color:var(--t2);">We will confirm your order via WhatsApp within 24 hours.</p>
+<button class="btn-submit" style="margin-top:16px;width:100%;" onclick="closeOrder()">Close</button></div>
 </div></div>
 <script>
 var currentOrderProduct=''
