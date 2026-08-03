@@ -51,6 +51,36 @@ body{font-family:var(--fb);background:var(--bg);color:var(--t1);line-height:1.6}
 .related-card p{padding:0 16px 16px;color:var(--gold);font-size:.9rem}
 .footer{background:var(--bg2);border-top:1px solid #21262D;padding:32px 24px;text-align:center;color:var(--t3);font-size:.85rem}
 @media(max-width:768px){.product-layout{grid-template-columns:1fr;gap:32px}.product-info h1{font-size:1.8rem}}
+
+.order-overlay{position:fixed;inset:0;z-index:3000;background:rgba(0,0,0,.8);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
+.order-overlay.open{opacity:1;pointer-events:auto}
+.order-modal{background:var(--bg2);border:1px solid var(--bd);border-radius:20px;padding:44px;width:500px;max-width:94vw;max-height:90vh;overflow-y:auto;box-shadow:0 24px 80px rgba(0,0,0,.6)}
+.order-modal h3{font-family:var(--fh);font-size:1.6rem;color:var(--gold);margin-bottom:4px}
+.order-modal .product-name{color:var(--t2);font-size:.92rem;margin-bottom:28px}
+.order-form{display:flex;flex-direction:column;gap:18px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group label{font-size:.82rem;color:var(--t2);font-weight:500;letter-spacing:.3px}
+.form-group input{padding:14px 16px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--t1);font-size:.95rem;outline:none;transition:border-color .25s,box-shadow .25s;font-family:var(--fb)}
+.form-group input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,164,92,.15)}
+.form-group input::placeholder{color:var(--t3)}
+.form-actions{display:flex;gap:12px;margin-top:10px}
+.btn-submit{flex:1;padding:15px 28px;border-radius:10px;border:none;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--bg);font-weight:600;font-size:.95rem;transition:box-shadow .2s,transform .2s}
+.btn-submit:hover{box-shadow:0 6px 24px rgba(200,164,92,.25);transform:translateY(-1px)}
+.btn-submit:active{transform:translateY(0)}
+.btn-cancel{padding:14px 28px;border-radius:10px;cursor:pointer;background:transparent;color:var(--t1);border:1px solid var(--bd);font-weight:500;font-size:.95rem;transition:border-color .2s}
+.btn-cancel:hover{border-color:var(--t2)}
+.btn-order{display:block;width:100%;margin-top:14px;padding:11px 0;border-radius:8px;border:none;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--bg);font-weight:600;font-size:.88rem;transition:box-shadow .2s,transform .2s}
+.btn-order:hover{box-shadow:0 4px 18px rgba(200,164,92,.15);transform:translateY(-1px)}
+.order-success{text-align:center;padding:16px 4px;display:none}
+.order-success .check-icon{font-size:2.8rem;margin-bottom:10px}
+.order-success h4{font-family:var(--fh);font-size:1.4rem;color:var(--gold);margin-bottom:6px}
+.bank-card{background:var(--card);border:1px solid var(--gold-dark);border-radius:12px;padding:20px 24px;margin:20px 0;text-align:left;font-size:.83rem;line-height:1.8}
+.bank-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--bd)}
+.bank-row:last-child{border-bottom:none}
+.bank-row .blabel{color:var(--t3);font-size:.78rem;flex-shrink:0;margin-right:12px}
+.bank-row .bvalue{color:var(--t1);font-weight:500;text-align:right;word-break:break-all}
+.bank-row .bvalue.highlight{color:var(--gold);font-weight:700}
+.bank-note{font-size:.76rem;color:var(--t3);line-height:1.6;margin-top:14px;padding:12px;background:rgba(200,164,92,.06);border-radius:8px}
 </style>
 </head>
 <body>
