@@ -88,7 +88,7 @@ body{font-family:var(--fb);background:var(--bg);color:var(--t1);line-height:1.6}
 </style>
 </head>
 <body>
-<nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">馃€?Mahjong Best</a><a href="/" class="back-link">鈫?Back to Store</a></div></nav>
+<nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">🀄 Mahjong Best</a><a href="/" class="back-link">← Back to Store</a></div></nav>
 
 <main class="main">
 <div class="product-layout">
@@ -96,10 +96,10 @@ body{font-family:var(--fb);background:var(--bg);color:var(--t1);line-height:1.6}
     <img src="https://s.alicdn.com/@sc04/kf/H9c103aeb2f1347e3a3e0b591195f73119/Aesthetic-White-Acrylic-American-Mahjong-Set-Custom.jpg?hasNWGrade=1" alt="White Acrylic Lucky Tiger Mahjong Set">
   </div>
   <div class="product-info">
-    <span class="product-badge">馃弳 Bestseller</span>
+    <span class="product-badge">🏆 Bestseller</span>
     <h1>White Acrylic Lucky Tiger Set</h1>
-    <div class="price">$43 鈥?$65 <span style="font-size:1rem;font-weight:400;color:var(--t2)">USD</span></div>
-    <div class="moq">Minimum order: 1 set 路 7-day sample available 路 OEM custom branding</div>
+    <div class="price">$43 –$65 <span style="font-size:1rem;font-weight:400;color:var(--t2)">USD</span></div>
+    <div class="moq">Minimum order: 1 set · 7-day sample available · OEM custom branding</div>
     <p class="desc">Our #1 bestseller and top gift-ready SKU. Crisp white acrylic tiles with hand-painted 24K gold joker art featuring Lucky Tiger, Crown, and Dragon motifs. Each tile is deep CNC-carved with four-layer construction for the perfect weight and sound. The luxury presentation case makes it gift-ready right out of the box — no additional wrapping needed. As holiday gift guides start curating for 2026 (CNN, Parade, TIME all featuring mahjong as the year's must-gift game), this set arrives shelf-ready for the season.</p>
     <div style="background:var(--card);border:1px solid var(--gold-dark);border-radius:10px;padding:18px;margin-bottom:28px;">
       <div style="color:var(--gold);font-weight:600;font-size:.88rem;margin-bottom:8px;">🏆 Why Retailers Choose This Set</div>
@@ -114,8 +114,8 @@ body{font-family:var(--fb);background:var(--bg);color:var(--t1);line-height:1.6}
       <div class="spec-item"><div class="spec-label">MOQ</div><div class="spec-value">1 Set</div></div>
     </div>
     <div class="cta">
-      <a href="https://wa.me/8618669693290" class="btn-wa" target="_blank">馃挰 WhatsApp Inquiry</a>
-      <a href="mailto:yale@mahjongbest.com" class="btn-primary">Request Sample</a>
+      <a href="https://wa.me/8618669693290" class="btn-wa" target="_blank" onclick="openOrder('White Acrylic Lucky Tiger Set')">💬 WhatsApp Inquiry</a>
+      <button class="btn-primary" onclick="openOrder('White Acrylic Lucky Tiger Set')">Order Now</button>
     </div>
   </div>
 </div>
@@ -125,15 +125,15 @@ body{font-family:var(--fb);background:var(--bg);color:var(--t1);line-height:1.6}
   <div class="related-grid">
     <a href="deep-teal.html" class="related-card">
       <img src="https://s.alicdn.com/@sc04/kf/H9a520a8a00b54f0581a02d07149b8de4b/Bespoke-Deep-Teal-American-Mahjong-Set-Engraved.png?hasNWGrade=1" alt="Deep Teal Peacock">
-      <h4>Deep Teal Peacock Set</h4><p>$43 鈥?$65</p>
+      <h4>Deep Teal Peacock Set</h4><p>$43 –$65</p>
     </a>
     <a href="mother-pearl.html" class="related-card">
       <img src="https://s.alicdn.com/@sc04/kf/He4c0c6d8523e43a6a7b6d218ff4a04a4N/In-Stock-Luxury-Mother-of-Pearl-American.jpg?hasNWGrade=1" alt="Mother of Pearl">
-      <h4>Mother of Pearl Luxe Set</h4><p>$43 鈥?$65</p>
+      <h4>Mother of Pearl Luxe Set</h4><p>$43 –$65</p>
     </a>
     <a href="terracotta.html" class="related-card">
       <img src="https://s.alicdn.com/@sc04/kf/H2d9c4eb0e7cd4b6ab48a12ba52439ec99/Terracotta-Orange-Mahjong-Set-Boho-Style-Acrylic.jpg?hasNWGrade=1" alt="Terracotta Orange">
-      <h4>Terracotta Orange Boho Set</h4><p>$43 鈥?$65</p>
+      <h4>Terracotta Orange Boho Set</h4><p>$43 –$65</p>
     </a>
   </div>
 </div>
@@ -148,9 +148,9 @@ body{font-family:var(--fb);background:var(--bg);color:var(--t1);line-height:1.6}
 <div class="form-group"><label>Shipping Address *</label><input type="text" id="orderAddress" placeholder="123 Main St, Apt 4B" required></div>
 <div class="form-group"><label>City / State / ZIP *</label><input type="text" id="orderCityZip" placeholder="New York, NY 10001" required></div>
 <div class="form-actions"><button type="button" class="btn-cancel" onclick="closeOrder()">Cancel</button><button type="submit" class="btn-submit">Submit Order</button></div></form></div>
-<div class="order-success" id="orderSuccess"><div class="check-icon">鉁?/div><h4>Order Submitted!</h4><p style="margin-bottom:4px;">Your order details have been sent to us. Please complete payment using the bank details below.</p>
+<div class="order-success" id="orderSuccess"><div class="check-icon">?/div><h4>Order Submitted!</h4><p style="margin-bottom:4px;">Your order details have been sent to us. Please complete payment using the bank details below.</p>
 <div style="background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:18px;margin:18px 0;text-align:left;font-size:.82rem;line-height:1.7;">
-<div style="color:var(--gold);font-weight:600;margin-bottom:10px;font-size:.9rem;">馃彟 Bank Transfer Details</div>
+<div style="color:var(--gold);font-weight:600;margin-bottom:10px;font-size:.9rem;">🏦 Bank Transfer Details</div>
 <div><span style="color:var(--t3);">Beneficiary Name:</span> <span style="color:var(--t1);">Linyi Strawberry International Trade Co., Ltd</span></div>
 <div><span style="color:var(--t3);">Account Number:</span> <span style="color:var(--t1);font-weight:600;">63003927994</span></div>
 <div><span style="color:var(--t3);">Swift Code:</span> <span style="color:var(--t1);">CHASHKHH / CHASHKHHXXX</span></div>

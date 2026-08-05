@@ -85,17 +85,17 @@ body{font-family:var(--fb);background:var(--bg);color:var(--t1);line-height:1.6}
 </style>
 </head>
 <body>
-<nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">馃€?Mahjong Best</a><a href="/" class="back-link">鈫?Back to Store</a></div></nav>
+<nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">🀄 Mahjong Best</a><a href="/" class="back-link">← Back to Store</a></div></nav>
 <main class="main">
 <div class="product-layout">
   <div class="product-gallery">
     <img src="https://s.alicdn.com/@sc04/kf/He4c0c6d8523e43a6a7b6d218ff4a04a4N/In-Stock-Luxury-Mother-of-Pearl-American.jpg?hasNWGrade=1" alt="Mother of Pearl Mahjong Set">
   </div>
   <div class="product-info">
-    <span class="product-badge">馃拵 Luxury</span>
+    <span class="product-badge">💎 Luxury</span>
     <h1>Mother of Pearl Luxe Set</h1>
-    <div class="price">$43 鈥?$65 <span style="font-size:1rem;font-weight:400;color:var(--t2)">USD</span></div>
-    <div class="moq">Minimum order: 1 set 路 7-day sample 路 OEM custom branding</div>
+    <div class="price">$43 –$65 <span style="font-size:1rem;font-weight:400;color:var(--t2)">USD</span></div>
+    <div class="moq">Minimum order: 1 set · 7-day sample · OEM custom branding</div>
     <p class="desc">The pinnacle of mahjong craftsmanship. Four layers of pearl white acrylic with an iridescent shimmer that catches light from every angle. Custom-engraved jokers with hand-painted gold detailing, silk-lined luxury case with gold hardware — every element speaks to heirloom quality. The go-to choice for luxury retailers, wedding registries, and discerning collectors. As summer wedding season transitions into fall 2026, this pearl finish remains in high demand — now peaking as an early holiday gift and luxury corporate present. Consistently our most-registered mahjong gift year-round.</p>
     <div style="background:var(--card);border:1px solid var(--gold-dark);border-radius:10px;padding:18px;margin-bottom:28px;">
       <div style="color:var(--gold);font-weight:600;font-size:.88rem;margin-bottom:8px;">💍 Why Retailers Choose This Set</div>
@@ -110,15 +110,15 @@ body{font-family:var(--fb);background:var(--bg);color:var(--t1);line-height:1.6}
       <div class="spec-item"><div class="spec-label">MOQ</div><div class="spec-value">1 Set</div></div>
     </div>
     <div class="cta">
-      <a href="https://wa.me/8618669693290" class="btn-wa" target="_blank">馃挰 WhatsApp Inquiry</a>
-      <a href="mailto:yale@mahjongbest.com" class="btn-primary">Request Sample</a>
+      <a href="https://wa.me/8618669693290" class="btn-wa" target="_blank" onclick="openOrder('Mother of Pearl Luxe Set')">💬 WhatsApp Inquiry</a>
+      <button class="btn-primary" onclick="openOrder('Mother of Pearl Luxe Set')">Order Now</button>
     </div>
   </div>
 </div>
 <div class="related"><h2>You May Also Like</h2><div class="related-grid">
-  <a href="lucky-tiger.html" class="related-card"><img src="https://s.alicdn.com/@sc04/kf/H9c103aeb2f1347e3a3e0b591195f73119/Aesthetic-White-Acrylic-American-Mahjong-Set-Custom.jpg?hasNWGrade=1" alt="Lucky Tiger"><h4>Lucky Tiger Set</h4><p>$43 鈥?$65</p></a>
-  <a href="deep-teal.html" class="related-card"><img src="https://s.alicdn.com/@sc04/kf/H9a520a8a00b54f0581a02d07149b8de4b/Bespoke-Deep-Teal-American-Mahjong-Set-Engraved.png?hasNWGrade=1" alt="Deep Teal"><h4>Deep Teal Peacock</h4><p>$43 鈥?$65</p></a>
-  <a href="terracotta.html" class="related-card"><img src="https://s.alicdn.com/@sc04/kf/H2d9c4eb0e7cd4b6ab48a12ba52439ec99/Terracotta-Orange-Mahjong-Set-Boho-Style-Acrylic.jpg?hasNWGrade=1" alt="Terracotta"><h4>Terracotta Boho</h4><p>$43 鈥?$65</p></a>
+  <a href="lucky-tiger.html" class="related-card"><img src="https://s.alicdn.com/@sc04/kf/H9c103aeb2f1347e3a3e0b591195f73119/Aesthetic-White-Acrylic-American-Mahjong-Set-Custom.jpg?hasNWGrade=1" alt="Lucky Tiger"><h4>Lucky Tiger Set</h4><p>$43 –$65</p></a>
+  <a href="deep-teal.html" class="related-card"><img src="https://s.alicdn.com/@sc04/kf/H9a520a8a00b54f0581a02d07149b8de4b/Bespoke-Deep-Teal-American-Mahjong-Set-Engraved.png?hasNWGrade=1" alt="Deep Teal"><h4>Deep Teal Peacock</h4><p>$43 –$65</p></a>
+  <a href="terracotta.html" class="related-card"><img src="https://s.alicdn.com/@sc04/kf/H2d9c4eb0e7cd4b6ab48a12ba52439ec99/Terracotta-Orange-Mahjong-Set-Boho-Style-Acrylic.jpg?hasNWGrade=1" alt="Terracotta"><h4>Terracotta Boho</h4><p>$43 –$65</p></a>
 </div></div>
 </main>
 <footer class="footer">&copy; 2026 Linyi Strawberry International Trade Co., Ltd. | mahjongbest.com</footer>
@@ -130,8 +130,8 @@ body{font-family:var(--fb);background:var(--bg);color:var(--t1);line-height:1.6}
 <div class="form-group"><label>Shipping Address *</label><input type="text" id="orderAddress" placeholder="123 Main St, Apt 4B" required></div>
 <div class="form-group"><label>City / State / ZIP *</label><input type="text" id="orderCityZip" placeholder="New York, NY 10001" required></div>
 <div class="form-actions"><button type="button" class="btn-cancel" onclick="closeOrder()">Cancel</button><button type="submit" class="btn-submit">Submit Order</button></div></form></div>
-<div class="order-success" id="orderSuccess"><div class="check-icon">鉁?/div><h4>Order Submitted!</h4><p style="margin-bottom:4px;">Your order details have been sent to us. Please complete payment using the bank details below.</p>
-<div class="bank-card"><div style="color:var(--gold);font-weight:600;margin-bottom:12px;font-size:.88rem;">馃彟 Bank Transfer</div>
+<div class="order-success" id="orderSuccess"><div class="check-icon">?/div><h4>Order Submitted!</h4><p style="margin-bottom:4px;">Your order details have been sent to us. Please complete payment using the bank details below.</p>
+<div class="bank-card"><div style="color:var(--gold);font-weight:600;margin-bottom:12px;font-size:.88rem;">🏦 Bank Transfer</div>
 <div class="bank-row"><span class="blabel">Beneficiary</span><span class="bvalue">Linyi Strawberry International Trade Co., Ltd</span></div>
 <div class="bank-row"><span class="blabel">Account No.</span><span class="bvalue highlight">63003927994</span></div>
 <div class="bank-row"><span class="blabel">Swift Code</span><span class="bvalue">CHASHKHH / CHASHKHHXXX</span></div>
