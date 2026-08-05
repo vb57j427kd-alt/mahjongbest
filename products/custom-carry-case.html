@@ -3,6 +3,7 @@
 <head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5J9VBPKTB4"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5J9VBPKTB4')</script>
+<script>(function(){function ld(){var f=document.getElementById('orderForm');if(f){f.addEventListener('submit',function(){try{var n=document.getElementById('orderName'),p=document.getElementById('orderPhone');if(n&&p&&n.value.trim()&&p.value.trim()&&typeof gtag!=='undefined'){gtag('event','generate_lead',{event_category:'order',product:(typeof currentOrderProduct!=='undefined'?currentOrderProduct:''),method:'order_form'})}}catch(x){}})}}document.addEventListener('DOMContentLoaded',ld);if(document.readyState==='interactive'||document.readyState==='complete'){setTimeout(ld,0)}document.addEventListener('click',function(e){var t=e.target&&e.target.closest?e.target.closest('a[href*="wa.me"],a[href^="mailto:"]'):null;if(!t||typeof gtag==='undefined'){return}gtag('event',t.href.indexOf('wa.me')>-1?'whatsapp_click':'email_click',{link_url:t.href})})})();</script>
 <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","xtrv7vr8dn")</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -129,12 +130,6 @@ body{font-family:var(--fb);background:var(--bg);color:var(--t1);line-height:1.6}
 <script>
 var currentOrderProduct=''
 function openOrder(n){currentOrderProduct=n;document.getElementById('orderProductName').textContent='Product: '+n;document.getElementById('orderFormWrap').style.display='block';document.getElementById('orderSuccess').style.display='none';document.getElementById('orderForm').reset();document.getElementById('orderOverlay').classList.add('open')}
-function closeOrder(){document.getElementById('orderOverlay').classList.remove('open')}
-function submitOrder(e){e.preventDefault();var n=document.getElementById('orderName').value.trim(),p=document.getElementById('orderPhone').value.trim(),a=document.getElementById('orderAddress').value.trim(),c=document.getElementById('orderCityZip').value.trim();if(!n||!p||!a||!c)return;var d=new Date().toISOString().split('T')[0];;var fd=new FormData();fd.append('product',currentOrderProduct);fd.append('name',n);fd.append('phone',p);fd.append('address',a);fd.append('cityzip',c);fd.append('date',d);fetch('https://formspree.io/f/xeeynyba',{method:'POST',body:fd,headers:{Accept:'application/json'}}).catch(function(){});document.getElementById('orderFormWrap').style.display='none';document.getElementById('orderSuccess').style.display='block'}
-</script>
-</body>
-</html>
-etElementById('orderSuccess').style.display='none';document.getElementById('orderForm').reset();document.getElementById('orderOverlay').classList.add('open')}
 function closeOrder(){document.getElementById('orderOverlay').classList.remove('open')}
 function submitOrder(e){e.preventDefault();var n=document.getElementById('orderName').value.trim(),p=document.getElementById('orderPhone').value.trim(),a=document.getElementById('orderAddress').value.trim(),c=document.getElementById('orderCityZip').value.trim();if(!n||!p||!a||!c)return;var d=new Date().toISOString().split('T')[0];;var fd=new FormData();fd.append('product',currentOrderProduct);fd.append('name',n);fd.append('phone',p);fd.append('address',a);fd.append('cityzip',c);fd.append('date',d);fetch('https://formspree.io/f/xeeynyba',{method:'POST',body:fd,headers:{Accept:'application/json'}}).catch(function(){});document.getElementById('orderFormWrap').style.display='none';document.getElementById('orderSuccess').style.display='block'}
 </script>
